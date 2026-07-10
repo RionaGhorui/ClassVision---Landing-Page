@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>ClassVision - AI powered Attendance System</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/classvisionlogo.png') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    </head>
+
+        
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/classvisionlogo.png') }}" style="height: 32px;" alt="ClassVision Logo">
+                <div class="logo-text">ClassVision</div>
+            </div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#journey">Journey</a>
+                <a href="#tech">Tech Stack</a>
+            </div>
+
+            <div class="nav-cta">
+                <a href="https://classvision-main.streamlit.app/" class="btn-pill">
+                    Start AI attendance <span class="material-symbols-outlined">arrow_outward</span>
+                </a>    
+            
+            </div>
+        </nav>
+
+        <header class="hero">
+            <div class="badge">Welcome to ClassVision</div>
+
+            <h1>AI powered<br><span>Attendance <br>System</span></h1>
+
+            <p>Revolutionizing the classroom with next-gen computer vision and voice biometrics. Created for educators for
+            speed, accuracy, and security.</p>
+
+            <div class="hero-actions">
+                <a href="https://classvision-main.streamlit.app/" class="btn-cta">
+                    Start AI attendance <span class="material-symbols-outlined">arrow_outward</span>
+                </a> 
+
+                <a href="#journey" class="link-action">My Journey</a>
+
+            </div>
+
+            <div class="floating-card card-left">
+                <div class="card-img">
+                    <img src="{{ url_for('static', filename='img/student.png') }}" alt="Landing Page Image - 1">
+                </div>
+            </div>
+
+            <div class="floating-card card-right">
+                <div class="card-img">
+                    <img src="{{ url_for('static', filename='img/teacher.png') }}" alt="Landing Page Image - 2">
+                </div>
+            </div>
+
+        </header>
+
+<!-- Features Section -->
+
+        <section id="features" class="features">
+                
+            <h2>Innovative Features</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="f-icon-box">📸</div>
+                    <h3>AI Face Analysis</h3>
+                    <p>
+                    Advanced neural networks analyze facial features to accurately identify students, ensuring precise attendance tracking.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="f-icon-box">🗣️</div>
+                    <h3>Voice-based ID</h3>
+                    <p>
+                    Students say "I am present" one-by-one and our audio AI matches their voice biometrics against stored embeddings in real-time.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="f-icon-box">📲</div>
+                    <h3>QR Subject Enrollment</h3>
+                    <p>
+                    Students can enroll in subjects by scanning QR codes, No manual entry required!
+                    </p>
+                </div>
+            </div>
+
+        </section>
+<!-- JOURNEY -------------------------------------------------------------------------------->
+
+<section id="journey" class="teacher-flow">
+    <div class="flow-container">
+        <div class="section-tag" style="text-align: center; margin-bottom: 40px; display:block;">Workflow</div>
+        <h2 style="text-align: center; font: size 5.5em; margin-bottom: 80px;">The Teacher's Journey</h2>
+
+        <div class="flow-step">
+            <div class="flow-content">
+                <div class="step-badge">STEP 01</div>
+                <h3>Secure Login</h3>
+                <p>Start Your session with High-Security Authentication portal. Your data is encrypted and synced across all your devices.</p>
+            </div>
+            <div class="flow-image">
+                <img src="{{ url_for('static', filename='img/teacherlogin.png') }}" alt="flow-image">
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <div class="flow-content">
+                <div class="step-badge">STEP 02</div>
+                <h3>Interactive Dashboard</h3>
+                <p>Manage your subjects, Attendance records and take attendance through audio and imaging.</p>
+            </div>
+            <div class="flow-image">
+                <img src="{{ url_for('static', filename='img/managesubjects.png') }}" alt="flow-image">
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <div class="flow-content">
+                <div class="step-badge">STEP 03</div>
+                <h3>Course Management</h3>
+                <p>Creating a new subject is easy! Just enter the name and create a subject code. ClassVision generates the QR-Code to invite students.</p>
+            </div>
+            <div class="flow-image">
+                <img src="{{ url_for('static', filename='img/newsub.png') }}" alt="flow-image">
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <div class="flow-content">
+                <div class="step-badge">STEP 04</div>
+                <h3>FaceID Attendance</h3>
+                <p>Use high speed Computer Vision to Analyze faces and mark attendance records.</p>
+            </div>
+            <div class="flow-image">
+                <img src="{{ url_for('static', filename='img/faceattended.png') }}" alt="flow-image">
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <div class="flow-content">
+                <div class="step-badge">STEP 05</div>
+                <h3>VoiceID Attendance</h3>
+                <p>Switch to voice mode for an efficient roll call. Students speak sequentially, and out AI matches their unique voice signatures</p>
+            </div>
+            <div class="flow-image">
+                <img src="{{ url_for('static', filename='img/voice.png') }}" alt="flow-image">
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <div class="flow-content">
+                <div class="step-badge">STEP 06</div>
+                <h3>Actionable Records</h3>
+                <p>Review and Manage past attendance logs and view confidence scores</p>
+            </div>
+            <div class="flow-image">
+                <img src="{{ url_for('static', filename='img/attendancerecord.png') }}" alt="flow-image">
+            </div>
+        </div>
+
+
+    </div>
+</section>
+<!-- TECH STACK ------------------------------------------------------------------->
+
+        <section id="tech" class="tech-stack">
+            <div class="section-tag">The Backend</div>
+            <h2>Tech  Stack</h2>
+
+            <div class="tech-grid">
+
+                <div class="tech-item">
+                    <div class="tech-card">
+                        <div class="t-icon">💻</div>
+                        <h4>Streamlit & Flask</h4>
+                        <p>A recative frontend architecture with a flask landing layer</p>
+                        <span class="tech-tag">Platform</span>
+                    </div>
+                </div>
+
+                <div class="tech-item">
+                    <div class="tech-card">
+                        <div class="t-icon">👁️</div>
+                        <h4>Face registration</h4>
+                        <p>FaceRecognition and Dlib for high quality facial biometrics</p>
+                        <span class="tech-tag">Vision AI</span>
+                    </div>  
+                </div>
+
+                <div class="tech-item">
+                    <div class="tech-card">
+                        <div class="t-icon">🎙️</div>
+                        <h4>Voice Embeddings</h4>
+                        <p>Utilize Librosa and Resemblyzer for unique student voice signatures</p>
+                        <span class="tech-tag">Audio AI</span>
+                    </div>
+                </div>
+
+                <div class="tech-item">
+                    <div class="tech-card">
+                        <div class="t-icon">☁️</div>
+                        <h4>Supabase Cloud</h4>
+                        <p>Real-time PostgreSQL Infrastructure with secure Auth</p>
+                        <span class="tech-tag">Storage</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+<!-- Student journey-->
+
+
+    <section id="journey" class="teacher-flow">
+    <div class="flow-container">
+        <div class="section-tag" style="text-align: center; margin-bottom: 40px; display:block;">Workflow</div>
+        <h2 style="text-align: center; font: size 5.5em; margin-bottom: 80px;">The Student's Journey</h2>
+
+        <div class="flow-step">
+            <div class="flow-content">
+                <div class="step-badge">STEP 01</div>
+                <h3>FaceID Login</h3>
+                <p>Login by positioning your face in front of the camera to take the photo and let ClassVision automatically log you in. New students will be redirected to register.</p>
+            </div>
+            <div class="flow-image">
+                <img src="{{ url_for('static', filename='img/studentlogin.png') }}" alt="flow-image">
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <div class="flow-content">
+                <div class="step-badge">STEP 02</div>
+                <h3>Join class via QR</h3>
+                <p>Join any course via the QR-code for the class shared by your teacher.</p>
+            </div>
+            <div class="flow-image">
+                <img src="{{ url_for('static', filename='img/joinclassqr.png') }}" alt="flow-image">
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <div class="flow-content">
+                <div class="step-badge">STEP 03</div>
+                <h3>View Subjects and Attendance</h3>
+                <p>View all subjects that you are enrolled in along with your attendance on your dashboard</p>
+            </div>
+            <div class="flow-image">
+                <img src="{{ url_for('static', filename='img/subjects.png') }}" alt="flow-image">
+            </div>
+        </div>
+
+    </div>
+    </section>
+        
+<!-- PURPLE SECTION -->
+
+        <section class="purple-section">
+            <h2>Ready to upgrade your classroom?</h2>
+            <p>Join the next generation of smart educators to transform the teaching experience.</p>
+
+            <a href="" class="btn-cta">
+                Start AI attendance!  <span class="material-symbols-outlined">arrow_outward</span>
+            </a>
+        </section>
+
+
+<!-- fOOTER Section -->
+
+        <footer class="main-footer">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="{{ url_for('static', filename='img/classvisionlogo.png') }}" style="height: 32px;" alt="ClassVision Logo">
+                        <div class="logo-text">ClassVision</div>
+                    </div>
+
+                    <p>The next generation of classroom management, powered by advanced AI biometrics. Join the future of education today!</p>
+                
+                </div>
+
+                <div class="footer-links">
+                    <h4>Product</h4>
+
+                    <ul>
+                        <li><a href="#features">AI Attendance</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#features">Smart Roster</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#tech">Tech Stack</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#student-journey">Student Portal</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>About Me</h4>
+
+                    <ul>
+                        <li><a href="#journey">My Journey</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#journey">About Me</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+                <p>&copy; 🎓 ClassVision. Built by - Riona Ghorui</p>
+            </div>
+
+
+        </footer>
+
+    </body>
+</html>
+
